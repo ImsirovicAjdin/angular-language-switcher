@@ -8,11 +8,27 @@ import { Component } from '@angular/core';
 export class AppComponent  {
   public lang = localStorage.setItem('lang', 'en');
 
-  public getLang = localStorage.getItem('lang');
+
+
+  public switchLanguage = 'en';
 
   getTheLang() {
-    alert(`the lang is: ${this.getLang}`);
-    return this.getLang;
+    let getLang = localStorage.getItem('lang');
+    alert(`the lang is: ${getLang}`);
+    return getLang;
+  }
+
+  switchLang() {
+    if (this.switchLanguage == 'en') {
+      this.switchLanguage = 'it';
+
+      localStorage.setItem('lang', 'it');
+
+      return this.switchLanguage;
+    }
+    localStorage.setItem('lang', 'en');
+    console.log(localStorage.getItem('lang'));
+    return this.switchLanguage == 'en';
   }
 
 }
