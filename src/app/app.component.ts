@@ -26,9 +26,13 @@ export class AppComponent  {
 
       return this.switchLanguage;
     }
-    localStorage.setItem('lang', 'en');
-    console.log(localStorage.getItem('lang'));
-    return this.switchLanguage == 'en';
+    if (this.switchLanguage == 'it') {
+      this.switchLanguage = 'en';
+
+      localStorage.setItem('lang', 'en');
+
+      return this.switchLanguage;
+    }
   }
 
 }
