@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: [ './app.component.css' ]
 })
 export class AppComponent  {
-  name = 'Angular';
+  public lang = localStorage.setItem('lang', 'en');
+
+  public getLang = localStorage.getItem('lang');
+
+  getTheLang() {
+    console.log(this.getLang);
+  }
 }
