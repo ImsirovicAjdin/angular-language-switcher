@@ -11,6 +11,8 @@ export class AppComponent  {
   public getLang = localStorage.getItem('lang');
 
   getTheLang() {
-    console.log(this.getLang);
+    alert(`the lang is: ${this.getLang}`);
+    return this.getLang;
   }
+
 }
