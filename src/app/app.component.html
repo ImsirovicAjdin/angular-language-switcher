@@ -1,5 +1,8 @@
 <button (click)="getTheLang()">get lang: {{ switchLanguage }}</button>
 <button (click)="switchLang()">set lang to: {{ switchLanguage }}</button>
-<p>
+<p *ngIf="switchLanguage == 'en'">
   Start editing to see some magic happen :)
+</p>
+<p *ngIf="switchLanguage == 'it'">
+  Inizia a modificare per vedere accadere un po 'di magia :)
 </p>

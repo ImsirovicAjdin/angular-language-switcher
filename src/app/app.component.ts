@@ -36,3 +36,17 @@ export class AppComponent  {
   }
 
 }
+
+    // document.onkeyup = function(e) {
+    //   if (e.ctrlKey && e.key === 'c') { // CTRL + c
+    //     const lang = sessionStorage.getItem('lang');
+
+    //     if (lang === 'en') {
+    //       translate.use('it');
+    //       sessionStorage.setItem('lang', 'it');
+    //     } else {
+    //       translate.use('en');
+    //       sessionStorage.setItem('lang', 'en');
+    //     }
+    //   }
+    // };
